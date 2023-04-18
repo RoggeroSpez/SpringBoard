@@ -14,8 +14,12 @@ image.src = imageDataUrl;
 image.addEventListener("load", () => {
     updateMemeCanvas(canvas, image, topTextInput.value, bottomTextInput.value);
 }, {once: true});
-topTextInput.addEventListener("change", () => {updateMemeCanvas(canvas, image, topText.value, bottomText.value);})
 bottomTextInput.addEventListener("change", () => {updateMemeCanvas(canvas, image, topText.value, bottomText.value);})
+    updateMemeCanvas(canvas, image, topText.value, bottomText.value);
+});
+bottomTextInput.addEventListener("change", () => {
+    updateMemeCanvas(canvas, image, topText.value, bottomText.value);
+});
 });
 
 function updateMemeCanvas(canvas, image, topText, bottomText){
