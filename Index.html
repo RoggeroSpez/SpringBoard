@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style src="Index.css"></style>
+    <link rel="stylesheet" href="Index.css">
     <title>MemeGenerator</title>
 </head>
 <body>
+<div class="meme-generator">
     <h1 id="Greet">Welcome to My MemeGenerator</h1>
-<input id="UserInput" type="text" placeholder="Input Meme Text">
-<br>
-<br>
-<button id="submitBtn">submit</button>
-<hr>
-<p>Placement of Completed Meme</p>
-</body>
+    <label>Select an Image</label>
+    <input type="file" id="fileImageInput">
+    <label>Top Text</label>
+    <input type="text" id="topTextInput">
+    <label>Bottom Text</label>
+    <input type="text" id="bottomTextInput">
+    <hr>
+    <canvas id="meme"></canvas>
+</div>
 <script Src="Index.js"></script>
+</body>
 </html>
