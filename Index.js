@@ -6,14 +6,13 @@ const canvas = document.querySelector("#meme");
 let image;
 
 imageFileInput.addEventListener("change", (e) => {
-    const imageDataUrl = URL.createObjectURL (e.target.files[0]);
-
+const imageDataUrl = URL.createObjectURL (e.target.files[0]);
 image = new Image();
 image.src = imageDataUrl;
-
 image.addEventListener("load", () => {
     updateMemeCanvas(canvas, image, topTextInput.value, bottomTextInput.value);
-}, {once: true});
+}, 
+{once: true});
 topTextInput.addEventListener("change", () => {
     updateMemeCanvas(canvas, image, topText.value, bottomText.value);
 });
@@ -21,7 +20,6 @@ bottomTextInput.addEventListener("change", () => {
     updateMemeCanvas(canvas, image, topText.value, bottomText.value);
 });
 });
-
 function updateMemeCanvas(canvas, image, topText, bottomText){
     const ctx = canvas.getContext("2d");
     const width = image.width;
