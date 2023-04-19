@@ -1,19 +1,21 @@
 .meme-generator {
-margin: 20 px, auto;
-width: 400 px;
-font-family: sans-serif;
+  margin: 20px auto;
+  width: 400px;
+  font-family: sans-serif;
 }
+
 .meme-generator label {
-display:block;
-font-weight: bold;
-margin-bottom: 10 px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .meme-generator input {
   width: 100%;
-box-sizing: border-box;
-margin-bottom: 20 px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
+
 #meme {
   width: 100%;
 }

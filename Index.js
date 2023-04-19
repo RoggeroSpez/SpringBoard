@@ -45,6 +45,7 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
   canvas.height = height;
   ctx.drawImage(image, 0, 0);
 
+  // Prepare text
   ctx.strokeStyle = "black";
   ctx.lineWidth = Math.floor(fontSize / 4);
   ctx.fillStyle = "white";
@@ -52,10 +53,12 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
   ctx.lineJoin = "round";
   ctx.font = `${fontSize}px sans-serif`;
 
+  // Add top text
   ctx.textBaseline = "top";
   ctx.strokeText(topText, width / 2, yOffset);
   ctx.fillText(topText, width / 2, yOffset);
 
+  // Add bottom text
   ctx.textBaseline = "bottom";
   ctx.strokeText(bottomText, width / 2, height - yOffset);
   ctx.fillText(bottomText, width / 2, height - yOffset);
