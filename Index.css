@@ -1,6 +1,7 @@
 .meme-generator {
 margin: 20 px, auto;
 width: 400 px;
+font-family: sans-serif;
 }
 .meme-generator label {
 display:block;

@@ -5,8 +5,8 @@ const canvas = document.querySelector("#meme");
 
 let image;
 
-imageFileInput.addEventListener("change", () => {
-    const imageDataUrl = URL.createObjectURL (imageFileInput.files[0]);
+imageFileInput.addEventListener("change", (e) => {
+    const imageDataUrl = URL.createObjectURL (e.target.files[0]);
 
 image = new Image();
 image.src = imageDataUrl;
@@ -28,7 +28,6 @@ function updateMemeCanvas(canvas, image, topText, bottomText){
     const height = image.height;
     const fontSize = Math.floor(width / 10);
     const yOffset = height / 25;
-    
     canvas.width = width;
     canvas.height = height;
     ctx.drawImage(image, 0, 0,);
