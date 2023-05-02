@@ -14,7 +14,7 @@ imageFileInput.addEventListener("change", (e) => {
     "load",
     () => {
       updateMemeCanvas(
-        canvas,
+        url,
         image,
         topTextInput.value,
         bottomTextInput.value

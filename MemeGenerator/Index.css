@@ -1,3 +1,9 @@
+#Title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .meme-generator {
   margin: 20px auto;
   width: 400px;
