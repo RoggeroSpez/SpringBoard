@@ -1,5 +1,4 @@
-const imageFileInput = document.querySelector("#imageFileInput");
-const canvas = document.querySelector("#meme");
+const url = document.querySelector("#url");
 const topTextInput = document.querySelector("#topTextInput");
 const bottomTextInput = document.querySelector("#bottomTextInput");
 
