@@ -43,22 +43,25 @@
 
 .topvalue {
   color: black;
+  display: flex;
   position: absolute;
   margin: auto;
   width: 100%;  
-  bottom: 0;    
+  top: 0;    
   font-size: 5em;
   text-align: center;
+  justify-content: center;
 }
 
 .botvalue {
   color: black;
-  position: absolute;
+  display: flex;
+  position: relative;
   margin: auto;
   width: 100%;  
   bottom: 0;    
   font-size: 5em;
-  text-align: center;
+  justify-content: center;
 }
 
 #DatMeme{
