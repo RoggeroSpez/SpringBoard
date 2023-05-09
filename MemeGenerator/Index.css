@@ -48,7 +48,7 @@
   margin: auto;
   width: 100%;  
   top: 0;    
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
   justify-content: center;
 }
@@ -56,11 +56,12 @@
 .botvalue {
   color: black;
   display: flex;
-  position: relative;
+  position: absolute;
   margin: auto;
-  width: 100%;  
+  width: 100%;
+  top: 115%;  
   bottom: 0;    
-  font-size: 5em;
+  font-size: 3em;
   justify-content: center;
 }
 
