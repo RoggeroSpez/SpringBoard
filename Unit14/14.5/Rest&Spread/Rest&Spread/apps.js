@@ -1,1 +1,7 @@
-resizeTo
+/* findMin */
+
+/* mergeObjects */
+
+/* doubleAndReturnArgs */
+
+/* SliceAndDice */

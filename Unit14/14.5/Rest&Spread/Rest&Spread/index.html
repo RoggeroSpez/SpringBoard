@@ -7,7 +7,19 @@
     <title>Rest and Spread</title>
 </head>
 <body>
-    
+    <ol>
+        <li>ES5</li>
+        <li>function filterOutOdds() {
+            var nums = Array.prototype.slice.call(arguments);
+            return nums.filter(function(num) {
+              return num % 2 === 0
+            });
+          }</li>
+    </ol>
+    <ol>
+        <li>ES2015</li>
+        <li>const filterOutOdds = (...args) => args.filter(v => v % 2 === 0)</li>
+    </ol>
 <script src="app.js"></script>    
 </body>
 </html>
