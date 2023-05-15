@@ -85,7 +85,6 @@ arr[1] = temp;
 
 /* Race Results */
 raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre'])
-
 /*
   {
     first: "Tom",
@@ -94,3 +93,4 @@ raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre'])
     rest: ["David", "Pierre"]
   }
 */
+const raceResults = ([first, second, third, ...rest]) => ({first, second, third, rest})
