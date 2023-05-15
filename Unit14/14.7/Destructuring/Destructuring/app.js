@@ -2,8 +2,8 @@
 let facts = {numPlanets: 8, yearNeptuneDiscovered: 1846};
 let {numPlanets, yearNeptuneDiscovered} = facts;
 
-console.log(numPlanets); // ?
-console.log(yearNeptuneDiscovered); // ?
+console.log(numPlanets); // 8
+console.log(yearNeptuneDiscovered); // 1846
 
 
 /* Object Destructuring 2*/
@@ -15,7 +15,7 @@ let planetFacts = {
   
   let {numPlanets, ...discoveryYears} = planetFacts;
   
-  console.log(discoveryYears); // ?
+  console.log(discoveryYears); // {yearNeputneDiscovered: 1846, yearMarsDiscovered: 1659}
 
 
 /* Object Destructuring 3*/
@@ -24,16 +24,16 @@ function getUserData({firstName, favoriteColor="green"}){
   }
   
   getUserData({firstName: "Alejandro", favoriteColor: "purple"}) // ?
-  getUserData({firstName: "Melissa"}) // ?
-  getUserData({}) // ?
+  getUserData({firstName: "Melissa"}) // your name is Melissa and you like green.
+  getUserData({}) // your name is undefied and you like green.
 
 
 /* Arry Destructuring 1*/
 let [first, second, third] = ["Maya", "Marisa", "Chi"];
 
-console.log(first); // ?
-console.log(second); // ?
-console.log(third); // ?
+console.log(first); // Maya
+console.log(second); // Marisa
+console.log(third); // Chi
 
 /* Arry Destructuring 2*/
 let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
@@ -44,15 +44,15 @@ let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
     "Brown paper packages tied up with strings"
   ]
   
-  console.log(raindrops); // ?
-  console.log(whiskers); // ?
-  console.log(aFewOfMyFavoriteThings); // ?
+  console.log(raindrops); // Raindrops on roses
+  console.log(whiskers); // Whiskers on kittens
+  console.log(aFewOfMyFavoriteThings); // ["Bright copper kettles", "warm woolen mittens", "Brown paper packages tied up with strings"]
 
 /* Arry Destructuring 3*/
 let numbers = [10, 20, 30];
 [numbers[1], numbers[2]] = [numbers[2], numbers[1]]
 
-console.log(numbers) // ?
+console.log(numbers) // [10, 30, 20]
 
 /* ES5 Assigning Variables to Object Properties*/
 var obj = {
