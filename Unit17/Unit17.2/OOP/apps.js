@@ -30,3 +30,52 @@ garage.vehicles; // [Car, Motorcycle]
 
 garage.add(new Motorcycle("Honda", "Nighthawk", 2001));
 // "Sorry, we're full."
+
+class vehicle {
+    constructor(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    honk (){
+        return "Beep.";
+    }
+    toString(){
+        return 'The vehical is a ${this.make} ${this.model} ${this.year}.';
+    }
+}
+
+class Car extends Vehicle{
+    constructor(make, year, model) {
+        super(make, year, model);
+        this.numWheels = 4;
+    }
+}
+
+class Motorcycle extends Vehicle{
+    constructor(make, year, model) {
+        super(make, year, model);
+        this.numWheels = 2;
+    }
+    revEngine(){
+        return "VROOM!!!";
+    }
+}
+
+class Garage {
+    constructor(capacity){
+        this.vehicle = [];
+        this.capacity = capacity;
+    }
+}
+    add(newVehical) {
+        if (!(newVehical instanceof Vehicle)) {
+            return "Only Vehicals allowed here!";
+        }
+        if (this.vehicle.length >= this.capacity) {
+            return "Sorry we are full.";
+        }
+        this.vehical.push(newVehical);{
+            return "Vehical added!";
+        }
+    }
