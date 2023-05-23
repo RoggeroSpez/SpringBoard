@@ -68,7 +68,7 @@ class Garage {
         this.capacity = capacity;
     }
 }
-    add(newVehical) {
+    add(newVehical); {
         if (!(newVehical instanceof Vehicle)) {
             return "Only Vehicals allowed here!";
         }
