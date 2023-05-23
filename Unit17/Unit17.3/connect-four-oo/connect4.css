@@ -26,9 +26,9 @@
 /* column-top is table row of clickable areas for each column */
 
 #column-top td {
-  border: dashed 1px lightgray;
+  border: dashed 1px darkblue;
 }
 
 #column-top td:hover {
-  background-color: gold;
+  background-color: aqua;
 }
