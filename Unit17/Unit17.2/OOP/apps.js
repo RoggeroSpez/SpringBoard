@@ -1,8 +1,8 @@
 let myFirstVehicle = new Vehicle("Honda", "Monster Truck", 1999);
 myFirstVehicle.honk(); // "Beep."
 
-let myFirstVehicle = new Vehicle("Honda", "Monster Truck", 1999);
-myFirstVehicle.toString(); // "The vehicle is a Honda Monster Truck from 1999."
+/* let myFirstVehicle = new Vehicle("Honda", "Monster Truck", 1999);
+myFirstVehicle.toString(); // "The vehicle is a Honda Monster Truck from 1999." */
 
 let myFirstCar = new Car("Toyota", "Corolla", 2005);
 myFirstCar.toString(); // "The vehicle is a Toyota Corolla from 2005."
