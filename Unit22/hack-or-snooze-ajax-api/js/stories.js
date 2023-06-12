@@ -23,8 +23,10 @@ function generateStoryMarkup(story) {
   // console.debug("generateStoryMarkup", story);
 
   const hostName = story.getHostName();
+
   return $(`
       <li id="${story.storyId}">
+      ${showDeleteBtn ? getDeleteBtnHTML() : ""}
         <a href="${story.url}" target="a_blank" class="story-link">
           ${story.title}
         </a>
@@ -35,6 +37,15 @@ function generateStoryMarkup(story) {
     `);
 }
 
+function getDeleteBtnHTML() {
+  return <span class="trash-bin"><i class="fas fa-trash-alt"></i></span>;
+}
+
+function getStarHTML(story, user) {
+  const isFavorite = user.isFavorite(story);
+  const starType = isFavorite ? "fas" : "far";
+  return <span class="star"><i class="${starType} fa-star"></i></span>;
+}
 /** Gets list of stories from server, generates their HTML, and puts on page. */
 
 function putStoriesOnPage() {
@@ -50,3 +61,14 @@ function putStoriesOnPage() {
 
   $allStoriesList.show();
 }
+
+async function deleteStory(evt) {
+const $closestLi = $(evt.target).closest("li");
+const storyId = $closestLi.attr("id");
+await storyList.removeStory(currentUser, storyId);
+
+await putUserStoriesOnPage();
+}
+
+$ownStories.on("click", ".trash-bin", deleteStory);
+
