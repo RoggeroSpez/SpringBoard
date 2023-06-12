@@ -5,3 +5,21 @@
   #8d2ab5
   #74119c
 */
+body{
+  background-color: blue;
+}
+h1{
+  color: white;
+  font-size: xx-large;
+  font-style: oblique;
+  text-transform: capitalize;
+  display:flex;
+  text-shadow: 15% white;
+  justify-content: center;
+  border: solid white;
+  padding: auto;
+  margin: auto;
+  font-size: 3em;
+  text-shadow: lightsteelblue 2px 2px;
+  border-radius: 16px;
+}
