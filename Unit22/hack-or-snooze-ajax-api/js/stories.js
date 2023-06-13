@@ -61,7 +61,7 @@ function putStoriesOnPage() {
 
   $allStoriesList.show();
 }
-
+//removing stories
 async function deleteStory(evt) {
 const $closestLi = $(evt.target).closest("li");
 const storyId = $closestLi.attr("id");
@@ -71,7 +71,7 @@ await putUserStoriesOnPage();
 }
 
 $ownStories.on("click", ".trash-bin", deleteStory);
-
+//user stories
 async function submitNewStory(evt) {
   evt.preventDefault();
 
@@ -103,3 +103,34 @@ function putUserStoriesOnPage () {
   }
   $ownStories.show();
 }
+//making favorites
+function putFavoritesListOnPage() {
+  $favoriteStories.empty();
+
+  if(currantUser.favorties.length===0){
+    $favoriteStories.append("Please add Favortie Storys'");
+  }
+  else {
+    for(let story of currantUser.favorties){ const $story = generateStoryMarkup(story);
+    $favoriteStories.append($story);
+    }
+  }
+  $favoriteStories.show();
+}
+
+async function toggleStoryFavorite(evt) {
+  const $tgt = $(evt.target);
+  const $closestLi = $tgt.closest("li");
+  const storyId = $closestLi.attr("id");
+  const story = storyList.stories.find(s => s.storyId === storyId);
+
+  if($tgt.hasClass("fas")) {
+    await currentUser.removeFavorite(story);
+    $tgt.closest("i").toggleClass("fas far");
+  }
+  else {
+    await currantUser.addFavorite(story);
+    $tgt.closest("i").toggleClass("fas far");
+  }
+}
+$allStoriesList.on("click", ".star", toggleStoryFavorite);
