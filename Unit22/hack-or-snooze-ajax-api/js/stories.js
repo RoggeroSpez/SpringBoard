@@ -72,3 +72,34 @@ await putUserStoriesOnPage();
 
 $ownStories.on("click", ".trash-bin", deleteStory);
 
+async function submitNewStory(evt) {
+  evt.preventDefault();
+
+  const title = $("#create-title").val();
+  const url = $("#create-url").val();
+  const author = $("#create-author").val();
+  const username = currantUser.username
+  const storyData = {title, url, author, username};
+  const story = await storyList.addStory(currentUser, storyData);
+  const $story = generateStoryMarkup(story);
+  $allStoriesList.prepend($story);
+
+  $submitForm.slideup("slow");
+  $submitForm.trigger("reset");
+}
+
+$submitForm.on("submit", submitNewStory);
+
+function putUserStoriesOnPage () {
+  $ownStories.empty();
+  if (currentUser.ownStories.length=== 0){
+    $ownStories.append("Please try again");
+  }
+  else {
+    for (let story of currantUser.ownStories){
+      let $story = generateStoryMarkup(story, true);
+      $ownStories.append($story);
+    }
+  }
+  $ownStories.show();
+}
