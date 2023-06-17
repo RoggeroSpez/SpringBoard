@@ -87,8 +87,14 @@ class StoryList {
 
     return story;
   }
-
-
+async removeStory(user, storyId){
+  const token = user.loginToken;
+  await axios({ url: "${BASE_URL}/stories/${storyId}", method: "Delete", data:{token: user.loginToken}});
+this.stories = this.stories.filter(story => story.storyId !== storyId);
+user.ownStories = user.ownStories.filter (s => s.storyId !== storyId);
+user.favorites = user.favorites.filter (s = s.storyId !== storyId);
+}
+}
 /******************************************************************************
  * User: a user in the system (only used to represent the current user)
  */
@@ -202,5 +208,24 @@ class User {
       console.error("loginViaStoredCredentials failed", err);
       return null;
     }
+  }
+  async addFavorites(story){
+    this.favorites.push(story);
+    await this._addOrRemoveFavorite("add", story);
+  }
+  
+  async removeFavorite(story){
+    this.favorites = this.favorites.filter(s => s.storyId !== story.storyId);
+    await this._addOrRemoveFavorite("remove", story);
+  }
+  async _addOrRemoveFavorite(newState, story) {
+    const method = newState === "add" ? "post" : "Delete";
+    const token = this.loginToken;
+    await axios ({ url: "${BASE_URL}/users/${this.username}/favorites/${story.storyId}", 
+    method: method, 
+    data: {token},});
+  }
+  isFavorite(story){
+    return this.favorites.some(s => (s.storyId === story.storyId));
   }
 }
