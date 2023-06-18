@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 
 // This is the global list of the stories, an instance of StoryList
 let storyList;
@@ -38,13 +38,13 @@ function generateStoryMarkup(story) {
 }
 
 function getDeleteBtnHTML() {
-  return <span class="trash-bin"><i class="fas fa-trash-alt"></i></span>;
+  return  '<span class="trash-bin"><i class="fas fa-trash-alt"></i></span>';
 }
 
 function getStarHTML(story, user) {
   const isFavorite = user.isFavorite(story);
   const starType = isFavorite ? "fas" : "far";
-  return <span class="star"><i class="${starType} fa-star"></i></span>;
+  return '<span class="star"><i class="${starType} fa-star"></i></span>';
 }
 /** Gets list of stories from server, generates their HTML, and puts on page. */
 
