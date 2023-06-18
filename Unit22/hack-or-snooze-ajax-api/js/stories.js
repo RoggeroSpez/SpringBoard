@@ -1,4 +1,4 @@
-/*"use strict";
+"use strict";
 
 // This is the global list of the stories, an instance of StoryList
 let storyList;
@@ -33,8 +33,7 @@ function generateStoryMarkup(story) {
         <small class="story-hostname">(${hostName})</small>
         <small class="story-author">by ${story.author}</small>
         <small class="story-user">posted by ${story.username}</small>
-      </li>
-    `);
+      </li>`);
 }
 
 function getDeleteBtnHTML() {
@@ -68,9 +67,7 @@ const storyId = $closestLi.attr("id");
 await storyList.removeStory(currentUser, storyId);
 
 await putUserStoriesOnPage();
-}
-
-$ownStories.on("click", ".trash-bin", deleteStory);
+$ownStories.on("click", ".trash-bin", deleteStory);}
 //user stories
 async function submitNewStory(evt) {
   evt.preventDefault();
@@ -86,9 +83,9 @@ async function submitNewStory(evt) {
 
   $submitForm.slideup("slow");
   $submitForm.trigger("reset");
-}
 
-$submitForm.on("submit", submitNewStory);
+  $submitForm.on("submit", submitNewStory);
+}
 
 function putUserStoriesOnPage () {
   $ownStories.empty();
@@ -132,5 +129,5 @@ async function toggleStoryFavorite(evt) {
     await currantUser.addFavorite(story);
     $tgt.closest("i").toggleClass("fas far");
   }
+  $allStoriesList.on("click", ".star", toggleStoryFavorite);
 }
-$allStoriesList.on("click", ".star", toggleStoryFavorite);
