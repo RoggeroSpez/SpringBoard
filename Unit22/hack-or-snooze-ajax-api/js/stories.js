@@ -19,21 +19,26 @@ async function getAndShowStoriesOnStart() {
  * Returns the markup for the story.
  */
 
-function generateStoryMarkup(story) {
+function generateStoryMarkup(story, showDeleteBtn = false) {
   // console.debug("generateStoryMarkup", story);
 
   const hostName = story.getHostName();
 
+  // if a user is logged in, show favorite/not-favorite star
+  const showStar = Boolean(currentUser);
+
   return $(`
       <li id="${story.storyId}">
-      ${showDeleteBtn ? getDeleteBtnHTML() : ""}
+        ${showDeleteBtn ? getDeleteBtnHTML() : ""}
+        ${showStar ? getStarHTML(story, currentUser) : ""}
         <a href="${story.url}" target="a_blank" class="story-link">
           ${story.title}
         </a>
         <small class="story-hostname">(${hostName})</small>
         <small class="story-author">by ${story.author}</small>
         <small class="story-user">posted by ${story.username}</small>
-      </li>`);
+      </li>
+    `);
 }
 
 function getDeleteBtnHTML() {

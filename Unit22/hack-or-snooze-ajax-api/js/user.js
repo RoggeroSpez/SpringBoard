@@ -107,11 +107,12 @@ function saveUserCredentialsInLocalStorage() {
  * - generate the user profile part of the page
  */
 
-function updateUIOnUserLogin() {
+async function updateUIOnUserLogin() {
   console.debug("updateUIOnUserLogin");
 
-  hidePageCompenets();
+  hidePageComponents();
 
+  // re-display stories (so that "favorite" stars can appear)
   putStoriesOnPage();
   $allStoriesList.show();
 
