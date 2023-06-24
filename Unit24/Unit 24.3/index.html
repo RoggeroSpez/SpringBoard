@@ -15,7 +15,7 @@
           O(n + 10)
         </summary>
         <div class="content">
-          
+          O(n + 10) -> O(n)
         </div>
       </details>
       <details>
@@ -23,7 +23,7 @@
           O(100 * n)
         </summary>
         <div class="content">
-          
+          O(100 * n) -> O(n)
         </div>
       </details>
       <details>
@@ -31,7 +31,7 @@
           O(25)
         </summary>
         <div class="content">
-          
+          O(25) -> O(1)
         </div>
       </details>
       <details>
@@ -39,7 +39,7 @@
           O(n^2 + n^3)
         </summary>
         <div class="content">
-          
+          O(n^2 + n^3) -> O(n^3)
         </div>
       </details>
       <details>
@@ -47,7 +47,7 @@
           O(n + n + n + n)
         </summary>
         <div class="content">
-          
+          O(n + n + n + n) -> O(n)
         </div>
       </details>
       <details>
@@ -55,7 +55,7 @@
           O(1000 * log(n) + n)
         </summary>
         <div class="content">
-          
+          O(1000 * log(n) + n) -> O(n)
         </div>
       </details>      
       <details>
@@ -63,7 +63,7 @@
           O(1000 * n * log(n) + n)
         </summary>
         <div class="content">
-          
+          O(1000 * n * log(n) + n) -> O(n log n)
         </div>
       </details>      
       <details>
@@ -71,7 +71,7 @@
           O(2^n + n^2)
         </summary>
         <div class="content">
-          
+          O(2^n + n^2) -> O(2^n)
         </div>
       </details>      
       <details>
@@ -79,7 +79,7 @@
           O(5 + 3 + 1)
         </summary>
         <div class="content">
-          
+          O(5 + 3 + 1) -> O(1)
         </div>
       </details>      
       <details>
@@ -87,7 +87,7 @@
           O(n + n^(1/2) + n^2 + n * log(n)^10)
         </summary>
         <div class="content">
-          
+          O(n + n^(1/2) + n^2 + n * log(n)^10) -> O(n^2)
         </div>
       </details>
       <br>
@@ -102,7 +102,13 @@
           }
         </summary>
         <div class="content">
-          
+          function logUpTo(n) {
+            for (let i = 1; i <= n; i++) {
+              console.log(i);
+            }
+          }
+
+          O(n)
         </div>
       </details>      
       <details>
@@ -114,7 +120,13 @@
           }
         </summary>
         <div class="content">
-          
+          function logAtLeast10(n) {
+            for (let i = 1; i <= Math.max(n, 10); i++) {
+              console.log(i);
+            }
+          }
+
+          O(n)
         </div>
       </details>      
       <details>
@@ -126,7 +138,13 @@
           }
         </summary>
         <div class="content">
-          
+          function logAtLeast10(n) {
+            for (let i = 1; i <= Math.max(n, 10); i++) {
+              console.log(i);
+            }
+          }
+
+          O(n)
         </div>
       </details>      
       <details>
@@ -138,7 +156,13 @@
           }
         </summary>
         <div class="content">
-          
+          function logAtMost10(n) {
+            for (let i = 1; i <= Math.min(n, 10); i++) {
+              console.log(i);
+            }
+          }
+
+          O(1)
         </div>
       </details>      
       <details>
@@ -154,7 +178,17 @@
           }
         </summary>
         <div class="content">
-          
+          function onlyElementsAtEvenIndex(array) {
+            let newArray = [];
+            for (let i = 0; i < array.length; i++) {
+              if (i % 2 === 0) {
+                newArray.push(array[i]);
+              }
+            }
+            return newArray;
+          }
+
+          O(n)
         </div>
       </details>      
       <details>
@@ -172,7 +206,19 @@
           }
         </summary>
         <div class="content">
-          
+          function subtotals(array) {
+            let subtotalArray = [];
+            for (let i = 0; i < array.length; i++) {
+              let subtotal = 0;
+              for (let j = 0; j <= i; j++) {
+                subtotal += array[j];
+              }
+              subtotalArray.push(subtotal);
+            }
+            return subtotalArray;
+          }
+
+          O(n^2)
         </div>
       </details>      
       <details>
@@ -195,7 +241,24 @@
           }
         </summary>
         <div class="content">
+          function vowelCount(str) {
+            let vowelCount = {};
+            const vowels = "aeiouAEIOU";
           
+            for (let char of str) {
+              if(vowels.includes(char)) {
+                if(char in vowelCount) {
+                  vowelCount[char] += 1;
+                } else {
+                  vowelCount[char] = 1;
+                }
+              }
+            }
+          
+            return vowelCount;
+          }
+
+          O(n) || includes is on a fixed length string || the max number of keys is 10
         </div>
       </details>
       <br>
@@ -206,7 +269,7 @@
           True or false: n^2 + n is O(n^2).
         </summary>
         <div class="content">
-          
+          True
         </div>
       </details>      
       <details>
@@ -214,7 +277,7 @@
           True or false: n^2 * n is O(n^3).
         </summary>
         <div class="content">
-          
+          True
         </div>
       </details>      
       <details>
@@ -222,7 +285,7 @@
           True or false: n^2 + n is O(n).
         </summary>
         <div class="content">
-          
+          False
         </div>
       </details>      
       <details>
@@ -230,7 +293,7 @@
           What's the time complexity of the .indexOf array method?
         </summary>
         <div class="content">
-          
+          O(n)
         </div>
       </details>      
       <details>
@@ -238,7 +301,7 @@
           What's the time complexity of the .includes array method?
         </summary>
         <div class="content">
-          
+          O(n)
         </div>
       </details>      
       <details>
@@ -246,7 +309,7 @@
           What's the time complexity of the .forEach array method?
         </summary>
         <div class="content">
-          
+          O(n)
         </div>
       </details>      
       <details>
@@ -254,7 +317,7 @@
           What's the time complexity of the .sort array method?
         </summary>
         <div class="content">
-          
+          O(n log N)
         </div>
       </details>      
       <details>
@@ -262,7 +325,7 @@
           What's the time complexity of the .unshift array method?
         </summary>
         <div class="content">
-          
+          O(n)
         </div>
       </details>      
       <details>
@@ -270,7 +333,7 @@
           What's the time complexity of the .push array method?
         </summary>
         <div class="content">
-          
+         O(1) 
         </div>
       </details>      
       <details>
@@ -278,7 +341,7 @@
           What's the time complexity of the .splice array method?
         </summary>
         <div class="content">
-          
+          O(n) or O(1) if at the end.
         </div>
       </details>      
       <details>
@@ -286,7 +349,7 @@
           What's the time complexity of the .pop array method?
         </summary>
         <div class="content">
-          
+          O(1)
         </div>
       </details>
       <details>
@@ -294,7 +357,7 @@
           What's the time complexity of the Object.keys() function?
         </summary>
         <div class="content">
-
+          O(n)
         </div>
       </details>
       <details>
@@ -302,7 +365,7 @@
           What's the space complexity of the Object.keys() function?
         </summary>
         <div class="content">
-
+          O(n)
         </div>
       </details>
     </main>
