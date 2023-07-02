@@ -1,0 +1,1 @@
+ReactDOM.render (<p>Learning React</p>, document.getElementById('root'));
