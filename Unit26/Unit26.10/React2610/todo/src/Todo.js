@@ -28,7 +28,7 @@ function Todo({ task = "default todo", id = "1", remove, update }) {
       <div>
         <form onSubmit={handleUpdate}>
           <input type="text" value={editTask} onChange={handleChange} />
-          <button>Update!</button>
+          <button>+NewTask</button>
         </form>
       </div>
     );
