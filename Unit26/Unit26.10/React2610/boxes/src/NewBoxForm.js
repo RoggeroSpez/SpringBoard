@@ -29,7 +29,7 @@ function NewBoxForm({createBox}){
                     />
                 </div>
                 <div>
-                    <label htmlFor="width">width</label>
+                    <label htmlFor="width">Width</label>
                     <input
                     onChange={handleChange}
                     type="text"
