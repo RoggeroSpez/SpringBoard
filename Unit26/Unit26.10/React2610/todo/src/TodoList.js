@@ -18,7 +18,7 @@ function Todo({ task = "default todo", id = "1", remove, update }) {
   let jsx = (
     <div>
       <li>{task}</li>
-      <button onClick={toggleEdit}>Edit</button>
+      <button onClick={toggleEdit}>Edit List</button>
       <button onClick={handleDelete}>X</button>
     </div>
   );
