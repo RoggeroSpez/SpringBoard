@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-function Todo({ task = "default todo", id = "1", remove, update }) {
+import './NewTodoForm';
+function Todo({ task = "default todo", id = "1", remove}) {
   const [editTask, setEditTask] = useState(task);
   const [isEditing, setIsEditing] = useState(false);
   const toggleEdit = () => {
@@ -11,7 +12,6 @@ function Todo({ task = "default todo", id = "1", remove, update }) {
   const handleDelete = () => remove(id);
   const handleUpdate = evt => {
     evt.preventDefault();
-    update(id, editTask);
     setIsEditing(false);
   };
   // default
