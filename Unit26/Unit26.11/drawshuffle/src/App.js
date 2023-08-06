@@ -1,6 +1,5 @@
 import React from "react";
 import Deck from"./Deck"
-
 function App() {
   return (
     <div>
@@ -8,5 +7,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

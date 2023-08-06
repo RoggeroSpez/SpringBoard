@@ -60,14 +60,12 @@ function Deck() {
         alert(err);
       }
     }
-
     if (isShuffling && deck) shuffleDeck(deck);
   }, [isShuffling, deck]);
   /* Draw */
   function toggleDraw() {
     setIsDrawing(auto => !auto);
   }
-
   /* Shuffle */
   function startShuffling() {
     return setIsShuffling(true);
@@ -80,7 +78,7 @@ function Deck() {
             className="Deck-gimme"
             onClick={toggleDraw}
             disabled={isShuffling}>
-          {isDrawing ? "STOP " : "KEEP "} DRAWING FOR ME
+          {isDrawing ? "STOP " : "KEEP "} Re:Draw
         </button>
     );
   }
@@ -92,7 +90,7 @@ function Deck() {
             className="Deck-gimme"
             onClick={startShuffling}
             disabled={isShuffling}>
-          SHUFFLE DECK
+          &#127136;SHUFFLE DECK&#127136;
         </button>
     );
   }
