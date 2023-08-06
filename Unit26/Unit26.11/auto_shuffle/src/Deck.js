@@ -2,23 +2,16 @@ import React, { useEffect, useState, useRef } from "react";
 import Card from "./Card";
 import axios from "axios";
 import "./Deck.css";
-
 const API_BASE_URL = "https://deckofcardsapi.com/api/deck";
-
-/** Deck: uses deck API, allows drawing card at a time. */
-
+/** Deck Build */
 function Deck() {
   const [deck, setDeck] = useState(null);
   const [drawn, setDrawn] = useState([]);
-
-  // these are toggled to true to begin events
+  // toggles
   const [isShuffling, setIsShuffling] = useState(false);
   const [isDrawing, setIsDrawing] = useState(false);
-
-  // ref to the timer ID so we can stop it on unmount
+  //timer
   const timerRef = useRef(null);
-
-
   useEffect(function loadDeckFromAPI() {
     async function fetchData() {
       let d = await axios.get(`${API_BASE_URL}/new/shuffle/`);
@@ -26,17 +19,12 @@ function Deck() {
     }
     fetchData();
   }, [setDeck]);
-
-
   useEffect(function drawCardAddToDrawn() {
     async function fetchCard() {
       try {
         let drawRes = await axios.get(`${API_BASE_URL}/${deck.deck_id}/draw/`);
-
         if (drawRes.data.remaining === 0) throw new Error("Deck empty!");
-
         const card = drawRes.data.cards[0];
-
         setDrawn(d => [
           ...d,
           {
@@ -50,22 +38,17 @@ function Deck() {
         alert(err);
       }
     }
-
     if (isDrawing && !timerRef.current) {
       timerRef.current = setInterval(fetchCard, 1000);
     } else if (!isDrawing && timerRef.current) {
       stopDrawingCards()
     }
-
     function stopDrawingCards() {
       if (timerRef.current) clearInterval(timerRef.current);
       timerRef.current = null;
     }
-
     return stopDrawingCards
   }, [isDrawing, deck]);
-
-
   useEffect(function shuffleDeckViaAPI() {
     async function shuffleDeck(deck) {
       try {
@@ -80,22 +63,18 @@ function Deck() {
 
     if (isShuffling && deck) shuffleDeck(deck);
   }, [isShuffling, deck]);
-
-
-  /** Draw card: change the state & effect will kick in. */
+  /* Draw */
   function toggleDraw() {
     setIsDrawing(auto => !auto);
   }
 
-  /** Shuffle: change the state & effect will kick in. */
+  /* Shuffle */
   function startShuffling() {
     return setIsShuffling(true);
   }
-
-  /** Return draw button (disabled if shuffling) */
+  /* ReDraw */
   function renderDrawBtnIfOk() {
     if (!deck) return null;
-
     return (
         <button
             className="Deck-gimme"
@@ -105,8 +84,7 @@ function Deck() {
         </button>
     );
   }
-
-  /** Return shuffle button (disabled if already is) */
+  /* ReShuffle */
   function renderShuffleBtnIfOk() {
     if (!deck) return null;
     return (
@@ -118,7 +96,6 @@ function Deck() {
         </button>
     );
   }
-
   return (
       <main className="Deck">
 
@@ -134,5 +111,4 @@ function Deck() {
       </main>
   );
 }
-
 export default Deck;
