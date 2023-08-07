@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './NewTodoForm';
-function Todo({ task = "default todo", id = "1", remove}) {
+function Todo({ task = "Create List", id = "1", remove}) {
   const [editTask, setEditTask] = useState(task);
   const [isEditing, setIsEditing] = useState(false);
   const toggleEdit = () => {
@@ -18,7 +18,7 @@ function Todo({ task = "default todo", id = "1", remove}) {
   let jsx = (
     <div>
       <li>{task}</li>
-      <button onClick={toggleEdit}>Edit</button>
+      <button onClick={toggleEdit}>Make changes</button>
       <button onClick={handleDelete}>X</button>
     </div>
   );
@@ -35,4 +35,4 @@ function Todo({ task = "default todo", id = "1", remove}) {
   }
   return jsx;
 }
-export default Todo;
+export default TodoList;
