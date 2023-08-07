@@ -19,7 +19,7 @@ function Todo({ task = "Create List", id = "1", remove}) {
     <div>
       <li>{task}</li>
       <button onClick={toggleEdit}>Make changes</button>
-      <button onClick={handleDelete}>X</button>
+      <button onClick={handleDelete}>Remove</button>
     </div>
   );
   // todo changes
@@ -35,4 +35,4 @@ function Todo({ task = "Create List", id = "1", remove}) {
   }
   return jsx;
 }
-export default TodoList;
+export default Todo;
