@@ -8,6 +8,7 @@ function Todo({ task = "Create List", id = "1"}) {
   };
   const handleChange = evt => {
     setEditTask(evt.target.value);
+    
   };
   const handleDelete = () => remove(id);
   const handleUpdate = evt => {
