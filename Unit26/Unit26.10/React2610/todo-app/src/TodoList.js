@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './NewTodoForm';
-function Todo({ task = "Create List", id = "1"}) {
+function Todo({ task = "Create List", id = "1", remove}) {
   const [editTask, setEditTask] = useState(task);
   const [isEditing, setIsEditing] = useState(false);
   const toggleEdit = () => {
