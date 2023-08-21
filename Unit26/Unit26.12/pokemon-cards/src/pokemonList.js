@@ -2,8 +2,10 @@
 const pokemon = [
 "Snorlax",
 "Lucario",
- "Bulbasaur",
- 
+"Bulbasaur",
+"Squirtle",
+"Ho-oh",
+"Jigglypuff"
 ];
 
 export default pokemon;
