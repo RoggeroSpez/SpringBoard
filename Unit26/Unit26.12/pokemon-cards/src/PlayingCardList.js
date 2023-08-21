@@ -10,7 +10,7 @@ function CardTable() {
   const [cards, setCards] = useState([]);
   const addCard = async () => {
     const response = await axios.get(
-      "https://deckofcardsapi.com/api/deck/<<deck_id>>/draw/?count=1"
+      "https://deckofcardsapi.com/api/deck/new/draw/?count=1"
     );
     setCards(cards => [...cards, { ...response.data, id: uuid() }]);
   };
