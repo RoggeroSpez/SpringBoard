@@ -11,13 +11,16 @@ function App(){
  const showPage = () => {
 if (page === 'home') return <Home/>
 if (page === 'food') return <Food/>
-if (page === 'drink') return <drink/>
+if (page === 'drink') return <Drink/>
  }
  return (
 <main className="App">
-<Home/>
-<Food/>
-<Drink/>
+<nav>
+<a onClick={()=setPage('home')}>Home</a>
+<a onClick={()=setPage('food')}>Food</a>
+<a onClick={()=setPage('drink')}>Drink</a>
+</nav>
+{showPage()}
 </main>
 );
 }
