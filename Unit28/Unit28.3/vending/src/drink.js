@@ -1,3 +1,3 @@
 import react from "react";
 
-export default drink;
+export default Drink;

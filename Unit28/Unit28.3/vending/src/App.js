@@ -4,9 +4,9 @@ import './App.css';
 
 /*Next are imports for components*/
 import Navbar from"./NavBar";
-import home from "./home";
-import food from "./Food";
-import drink from "./Drink";
+import Home from "./Home";
+import Food from "./Food";
+import Drink from "./Drink";
 
 
 function App(){
@@ -21,9 +21,9 @@ if (page === 'Drink') return <Drink/>
     <BrowserRouter>
     <NavBar/>
     <Routes>
-<Route path="/Home" element={<Home/>}/>
-<Route path="/Food" element={<Food/>}/>
-<Route path="/Drink" element={<Drink/>}/>      
+<Route path="./Home" element={<Home/>}/>
+<Route path="./Food" element={<Food/>}/>
+<Route path="./Drink" element={<Drink/>}/>      
     </Routes>
     </BrowserRouter>
 

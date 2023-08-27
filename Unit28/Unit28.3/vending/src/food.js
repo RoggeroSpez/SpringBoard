@@ -1,4 +1,4 @@
 import react from "react";
 
 
-export default food;
+export default Food;
