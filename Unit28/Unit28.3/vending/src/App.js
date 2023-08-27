@@ -6,13 +6,20 @@ import food from "./food";
 import drink from "./drink";
 
 
-function App() {
-  return (
-    <main className="App">
-    <food/>
-    <drink/>
-    </main>
-  );
+function App(){
+ const [page, setPage] = useState('home');
+ const showPage = () => {
+if (page === 'home') return <Home/>
+if (page === 'food') return <Food/>
+if (page === 'drink') return <drink/>
+ }
+ return (
+<main className="App">
+<Home/>
+<Food/>
+<Drink/>
+</main>
+);
 }
 
 export default App;
