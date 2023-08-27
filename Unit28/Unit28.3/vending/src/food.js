@@ -6,5 +6,4 @@ const Food =[
     "Butterfingers",
     "Hersheys'"
 ]
-
 export default Food;
