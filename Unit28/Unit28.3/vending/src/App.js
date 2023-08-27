@@ -3,11 +3,10 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css';
 
 /*Next are imports for components*/
-import Navbar from"./NavBar";
+/*import Navbar from"./NavBar";
 import Home from "./Home";
 import Food from "./Food";
-import Drink from "./Drink";
-
+import Drink from "./Drink";*/
 
 function App(){
  const [page, setPage] = useState('home');
