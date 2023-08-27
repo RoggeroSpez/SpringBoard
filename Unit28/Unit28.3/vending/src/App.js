@@ -1,28 +1,34 @@
 import React, {useState} from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css';
 
 /*Next are imports for components*/
-import food from "./food";
-import drink from "./drink";
+import Navbar from"./NavBar";
+import home from "./home";
+import food from "./Food";
+import drink from "./Drink";
 
 
 function App(){
  const [page, setPage] = useState('home');
  const showPage = () => {
-if (page === 'home') return <Home/>
-if (page === 'food') return <Food/>
-if (page === 'drink') return <Drink/>
+if (page === 'Home') return <Home/>
+if (page === 'Food') return <Food/>
+if (page === 'Drink') return <Drink/>
  }
  return (
-<main className="App">
-<nav>
-<a onClick={()=setPage('home')}>Home</a>
-<a onClick={()=setPage('food')}>Food</a>
-<a onClick={()=setPage('drink')}>Drink</a>
-</nav>
-{showPage()}
-</main>
-);
+  <div className="App">
+    <BrowserRouter>
+    <NavBar/>
+    <Routes>
+<Route path="/Home" element={<Home/>}/>
+<Route path="/Food" element={<Food/>}/>
+<Route path="/Drink" element={<Drink/>}/>      
+    </Routes>
+    </BrowserRouter>
+
+  </div>
+ );
 }
 
 export default App;
