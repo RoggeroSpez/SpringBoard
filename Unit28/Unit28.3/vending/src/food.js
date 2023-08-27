@@ -1,4 +1,5 @@
-import react from "react";
-
+const Food =[
+    
+]
 
 export default Food;

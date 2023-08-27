@@ -1,3 +1,4 @@
-import react from "react";
+const Drinks = [
 
+]
 export default Drink;
