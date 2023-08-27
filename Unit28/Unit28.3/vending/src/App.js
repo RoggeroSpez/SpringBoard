@@ -8,12 +8,6 @@ import Food from "./Food";
 import Drink from "./Drink";
 import NavBar from "./NavBar";
 function App(){
-/* const [page, setPage] = useState('home');
- const showPage = () => {
-if (page === 'Home') return <Home/>
-if (page === 'Food') return <Food/>
-if (page === 'Drink') return <Drink/>
- }*/
  return (
   <div className="App">
     <BrowserRouter>
