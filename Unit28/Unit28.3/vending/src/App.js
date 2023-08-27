@@ -21,9 +21,9 @@ if (page === 'Drink') return <Drink/>
     <BrowserRouter>
     <NavBar/>
     <Routes>
-<Route path="./Home" element={<Home/>}/>
-<Route path="./Food" element={<Food/>}/>
-<Route path="./Drink" element={<Drink/>}/>      
+<Route path="/Home" element={<Home/>}/>
+<Route path="/Food" element={<Food/>}/>
+<Route path="/Drink" element={<Drink/>}/>      
     </Routes>
     </BrowserRouter>
 
