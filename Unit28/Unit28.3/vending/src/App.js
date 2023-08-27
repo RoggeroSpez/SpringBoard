@@ -18,7 +18,7 @@ if (page === 'Drink') return <Drink/>
   <div className="App">
     <BrowserRouter>
     <Routes>
-<Route path="/Home" element={<Home/>}/>
+<Route path="/" element={<Home/>}/>
 <Route path="/Food" element={<Food/>}/>
 <Route path="/Drink" element={<Drink/>}/>      
     </Routes>
