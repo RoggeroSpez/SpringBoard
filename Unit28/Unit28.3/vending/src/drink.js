@@ -1,4 +1,4 @@
-const Drinks = [
+const Drink = [
 "Coke-Cola",
 "Sprite",
 "Fanta",
