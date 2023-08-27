@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+/*import React, {useState} from "react";*/
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css';
 
@@ -20,10 +20,9 @@ if (page === 'Drink') return <Drink/>
     <Routes>
 <Route path="/" element={<Home/>}/>
 <Route path="/Food" element={<Food/>}/>
-<Route path="/Drink" element={<Drink/>}/>      
+<Route path="/Drink" element={<Drink/>}/>   
     </Routes>
     </BrowserRouter>
-
   </div>
  );
  }
