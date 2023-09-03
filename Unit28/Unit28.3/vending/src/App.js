@@ -9,14 +9,7 @@ import NavBar from "./NavBar";
 function App(){
  return (
   <div className="App">
-    <BrowserRouter>
-    <NavBar/>
-    <Routes>
-<Route path="/" element={<Home/>}/>
-<Route path="/Food" element={<Food/>}/>
-<Route path="/Drink" element={<Drink/>}/>   
-    </Routes>
-    </BrowserRouter>
+<NavBar/>
   </div>
  );
  }

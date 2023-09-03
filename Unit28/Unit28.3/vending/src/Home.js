@@ -8,14 +8,7 @@ import NavBar from "./NavBar";
 function Home(){
 return(
     <div>
-    <BrowserRouter>
-    <NavBar/>
-    <Routes>
-<Route path="/" element={<Home/>}/>
-<Route path="/Food" element={<Food/>}/>
-<Route path="/Drink" element={<Drink/>}/>   
-    </Routes>
-    </BrowserRouter>
+<NavBar/>
   </div>
 )
 }
