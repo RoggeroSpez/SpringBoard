@@ -1,5 +1,8 @@
 import React from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from "/Home";
+import Food from "/Food";
+import Drink from "/Drink";
 
 function NavBar(){
     return(
