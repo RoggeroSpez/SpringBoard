@@ -1,12 +1,16 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function NavBar(){
     return(
         <nav className="NavBar">
-<link to ="/Home">Home</link>
-<link to ="/Food">Food</link>
-<link to ="/Drink">Drink</link>            
+            <BrowserRouter>
+            <Routes>
+                <Route path="/Home" element={<Home/>}/>
+                <Route path="/Food" element={<Food/>}/>
+                <Route path="/Drink" element={<Food/>}/>
+            </Routes>
+            </BrowserRouter>
         </nav>
     );
 }
