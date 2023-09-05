@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 /*Next are imports for components*/
-import Food from "/Food";
-import Drink from "/Drink";
-import NavBar from "/NavBar";
+import Food from "./Food";
+import Drink from "./Drink";
+import NavBar from "./NavBar";
 function Home(){
 return(
     <div>
