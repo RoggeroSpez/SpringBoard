@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 /*Next are imports for components*/
-import Food from "./Food";
-import Drink from "./Drink";
-import NavBar from "./NavBar";
 function Home(){
 return(
-    <div>
-<NavBar/>
+    <div className="Home">
+      <ol>
+        <li><Link to="/Food">Food</Link></li>
+        <li><Link to="/Drink">Drink</Link></li>
+      </ol>
   </div>
-)
+);
 }
 
 export default Home;

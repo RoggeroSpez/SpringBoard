@@ -6,11 +6,18 @@ import Home from "./Home";
 import Food from "./Food";
 import Drink from "./Drink";
 import NavBar from "./NavBar";
-function App(){
- return (
-  <div className="App">
-<NavBar/>
-  </div>
- );
- }
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/Food" element={<Food />} />
+          <Route path="/Drink" element={<Drink />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
 export default App;
