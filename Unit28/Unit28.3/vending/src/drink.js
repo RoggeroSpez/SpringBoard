@@ -1,3 +1,10 @@
+import CokeCola from "/CokeCola";
+import Sprite from "/Sprite";
+import Fanta from "/Fanta";
+import Gatorade from "/Gatorade";
+import Gingerale from "/Gingerale" ;
+import Gingerbeer from "/GingerBeer";
+
 function Drink(){
     return (
     <div>
