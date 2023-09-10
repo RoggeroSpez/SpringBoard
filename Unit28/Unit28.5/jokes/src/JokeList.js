@@ -3,35 +3,21 @@ import axios from "axios";
 import Joke from "./Joke";
 import "./JokeList.css";
 
-/** List of jokes. */
-
 class JokeList extends Component {
   static defaultProps = {
     numJokesToGet: 5
   };
-
   constructor(props) {
     super(props);
-    this.state = {
-      jokes: [],
-      isLoading: true
-    };
-
+    this.state = { jokes: [], isLoading: true};
     this.generateNewJokes = this.generateNewJokes.bind(this);
     this.vote = this.vote.bind(this);
   }
-
-  /* at mount, get jokes */
-
   componentDidMount() {
     this.getJokes();
   }
-
-  /* retrieve jokes from API */
-
   async getJokes() {
     try {
-      // load jokes one at a time, adding not-yet-seen jokes
       let jokes = [];
       let seenJokes = new Set();
 
@@ -54,16 +40,10 @@ class JokeList extends Component {
       console.error(err);
     }
   }
-
-  /* empty joke list, set to loading state, and then call getJokes */
-
   generateNewJokes() {
     this.setState({ isLoading: true});
     this.getJokes();
   }
-
-  /* change vote for this id by delta (+1 or -1) */
-
   vote(id, delta) {
     this.setState(st => ({
       jokes: st.jokes.map(j =>
@@ -71,9 +51,6 @@ class JokeList extends Component {
       )
     }));
   }
-
-  /* render: either loading spinner or list of sorted jokes. */
-
   render() {
     let sortedJokes = [...this.state.jokes].sort((a, b) => b.votes - a.votes);
     if (this.state.isLoading) {
@@ -83,7 +60,6 @@ class JokeList extends Component {
         </div>
       )
     }
-
     return (
       <div className="JokeList">
         <button
@@ -92,7 +68,6 @@ class JokeList extends Component {
         >
           Get New Jokes
         </button>
-
         {sortedJokes.map(j => (
           <Joke
             text={j.joke}
