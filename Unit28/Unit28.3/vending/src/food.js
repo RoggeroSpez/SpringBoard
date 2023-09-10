@@ -3,7 +3,7 @@ import Snickers from "./Snickers.jpg";
 import Skittles from "./Skittles.jpg";
 import MnMs from "./MnMs.jpg";
 import Butterfingers from "./Butterfingers.jpg" ;
-import Hersheys from "./Herseys.jpg";
+import Hersheys from "./Hersheys.jpg";
 
 function Food() {  
     return (

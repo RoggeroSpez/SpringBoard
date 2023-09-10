@@ -3,7 +3,7 @@ import Sprite from "./Sprite.jpg";
 import Fanta from "./Fanta.jpg";
 import Gatorade from "./Gatorade.jpg";
 import Gingerale from "./Gingerale.jpg" ;
-import Gingerbeer from "./GingerBeer.jpg";
+import Gingerbeer from "./Gingerbeer.jpg";
 
 function Drink(){
     return (
