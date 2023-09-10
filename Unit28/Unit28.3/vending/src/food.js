@@ -1,9 +1,9 @@
-import HotCheetos from "/HotCheetos";
-import Snickers from "/Snickers";
-import Skittles from "/Skittles";
-import MnMs from "/MnMs";
-import Butterfingers from "/Butterfingers" ;
-import Hersheys from "/Herseys";
+import HotCheetos from "/HotCheetos.jpeg";
+import Snickers from "/Snickers.jpeg";
+import Skittles from "/Skittles.jpeg";
+import MnMs from "/MnMs.jpeg";
+import Butterfingers from "/Butterfingers.jpeg" ;
+import Hersheys from "/Herseys.jpeg";
 
 function Food() {  
     return (

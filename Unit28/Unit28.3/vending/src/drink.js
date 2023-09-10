@@ -1,9 +1,9 @@
-import CokeCola from "/CokeCola";
-import Sprite from "/Sprite";
-import Fanta from "/Fanta";
-import Gatorade from "/Gatorade";
-import Gingerale from "/Gingerale" ;
-import Gingerbeer from "/GingerBeer";
+import CokeCola from "/CokeCola.jpeg";
+import Sprite from "/Sprite.jpeg";
+import Fanta from "/Fanta.jpeg";
+import Gatorade from "/Gatorade.jpeg";
+import Gingerale from "/Gingerale.jpeg" ;
+import Gingerbeer from "/GingerBeer.jpeg";
 
 function Drink(){
     return (
