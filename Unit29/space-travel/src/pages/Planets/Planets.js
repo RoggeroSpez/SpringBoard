@@ -1,5 +1,4 @@
 import {useState, useEffect, useContext} from "react";
-
 import styles from "./Planets.module.css";
 import {LoadingContext} from "../../context/LoadingProvider";
 import SpaceTravelApi from "../../services/SpaceTravelApi";
@@ -10,7 +9,6 @@ function Planets ()
   const {isLoading, enableLoading, disableLoading} = useContext(LoadingContext);
   const [selectedPlanetId, setSelectedPlanetId] = useState();
   const [selectedSpacecraftId, setSelectedSpacecraftId] = useState();
-
   async function getPlanetsWithSpacecrafts ()
   {
     const {data: planets, isError: isErrorPlanets} = await SpaceTravelApi.getPlanets();
