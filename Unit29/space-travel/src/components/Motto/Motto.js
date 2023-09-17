@@ -4,10 +4,9 @@ function Motto ()
 {
   return (
     <div className={styles["motto"]}>
-      <span className={styles["motto__text"]}>The solar system: the new home.</span>
+      <span className={styles["motto__text"]}>In A Land Far Far Away</span>
       <span className={styles["motto__emojis"]}>🌎🚀🧑‍🚀🪐</span>
     </div>
   );
 }
-
 export default Motto;
