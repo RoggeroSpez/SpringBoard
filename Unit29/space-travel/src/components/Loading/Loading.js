@@ -23,7 +23,7 @@ function Loading ()
 
   return (
     <div className={styles["loading"]}>
-      <span>Loading</span>
+      <span>Relocating Stars</span>
       {dots.map((dot, index) => <span key={index}>{dot}</span>)}
     </div>
   );
