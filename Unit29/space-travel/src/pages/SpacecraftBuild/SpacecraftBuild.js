@@ -1,18 +1,12 @@
 import {useState, useContext} from "react";
 import {useNavigate} from "react-router-dom";
-
 import styles from "./SpacecraftBuild.module.css";
 import {LoadingContext} from "../../context/LoadingProvider";
 import SpaceTravelApi from "../../services/SpaceTravelApi";
 
 function SpacecraftBuild ()
 {
-  const INITIAL_SPACECRAFT = {
-    name: "",
-    capacity: "",
-    description: "",
-    pictureUrl: ""
-  };
+  const INITIAL_SPACECRAFT = { name: "", capacity: "", description: "", pictureUrl: ""};
   const [spacecraft, setSpacecraft] = useState(INITIAL_SPACECRAFT);
   const [errors, setErrors] = useState([]);
   const navigate = useNavigate();
@@ -20,7 +14,7 @@ function SpacecraftBuild ()
 
   function handleChangeOfFormInput (event)
   {
-    // todo update form state
+    const {name, value} = event.target; setSpacecraft(prevSpacecraft => ({...prevSpacecraft, [name]: value}));
   }
 
   async function handleSubmitOfForm (event)
