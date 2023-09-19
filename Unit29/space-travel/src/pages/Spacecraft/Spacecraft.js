@@ -13,7 +13,17 @@ function Spacecraft ()
 
   useEffect(() =>
             {
-              // todo get spacecraft from the API using the ID from the route (very similar to what we did in Planets.js)
+              async function getSpacecraft ()
+              {
+                enableLoading();
+                const {data: spacecraft, isError} = await SpaceTravelApi.getSpacecraftById({id});
+                if (!isError)
+                {
+                  setSpacecraft(spacecraft);
+                }
+                disableLoading();
+              }
+              getSpacecraft();
             },
             [enableLoading, disableLoading]
   );
