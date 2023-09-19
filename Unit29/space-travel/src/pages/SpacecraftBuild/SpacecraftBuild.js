@@ -19,12 +19,37 @@ function SpacecraftBuild ()
 
   async function handleSubmitOfForm (event)
   {
-    // todo submit the form using the API
-  }
-
+    event.preventDefault();
+    let {name, capacity, description, pictureUrl} = spacecraft;
+    let isFormError = false;
+    setErrors([]);
+    if (name.length === 0)
+    {
+      isFormError = true; setErrors(prevErrors => ([...prevErrors, "Please Name the Ship!"]));
+    }
+    if (!capacity)
+    {
+       isFormError = true; setErrors(prevErrors => ([...prevErrors, "How Many People can fit!"]));
+    }
+    capacity = Number(capacity);
+    if (!Number.isInteger(capacity))
+    {
+      isFormError = true; setErrors(prevErrors => ([ ...prevErrors, "Please keep all members whole!" ]));
+    }
+    if (!description)
+    {
+       isFormError = true; setErrors(prevErrors => ([ ...prevErrors, "What Kind of ship is it!"]));
+    }
+    if (!isFormError)
+    {
+      enableLoading();
+      const {isError} = await SpaceTravelApi.buildSpacecraft({name, capacity, description, pictureUrl});
+      if (!isError)
+      {setSpacecraft(INITIAL_SPACECRAFT);}  disableLoading();
+    }
   function handleClickOfBack (event)
   {
-    // todo navigate back
+    navigate(-1);
   }
   return (
     <>
@@ -50,5 +75,5 @@ function SpacecraftBuild ()
     </>
   );
 }
-
+}
 export default SpacecraftBuild;
