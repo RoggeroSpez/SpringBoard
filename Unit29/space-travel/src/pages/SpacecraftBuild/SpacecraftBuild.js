@@ -29,7 +29,7 @@ function SpacecraftBuild ()
     }
     if (!capacity)
     {
-       isFormError = true; setErrors(prevErrors => ([...prevErrors, "How Many People can fit!"]));
+       isFormError = true; setErrors(prevErrors => ([...prevErrors, "How Many Potatoes can fit🥔!"]));
     }
     capacity = Number(capacity);
     if (!Number.isInteger(capacity))
@@ -38,7 +38,7 @@ function SpacecraftBuild ()
     }
     if (!description)
     {
-       isFormError = true; setErrors(prevErrors => ([ ...prevErrors, "What Kind of ship is it!"]));
+       isFormError = true; setErrors(prevErrors => ([ ...prevErrors, "What kind of ship is it!"]));
     }
     if (!isFormError)
     {
