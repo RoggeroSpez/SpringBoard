@@ -16,8 +16,17 @@ function Planets ()
 
     if (!isErrorPlanets && !isErrorSpacecrafts)
     {
-      // todo fill planets.spacecrafts with spacecrafts
-
+      for (const planet of planets)
+      {
+        planet.spacecrafts = [];
+        for (const spacecraft of spacecrafts)
+        {
+          if (planet.id === spacecraft.currentLocation)
+          {
+            planet.spacecrafts.push(spacecraft);
+          }
+        }
+      }
       setPlanetsWithSpacecrafts(planets);
     }
   }
@@ -38,14 +47,27 @@ function Planets ()
 
   function handleClickOfPlanet (event, id)
   {
-    // todo set the selected planet
+  if (!isLoading)
+  {
+    setSelectedPlanetId(id);
+  }
   }
 
   async function handleClickOfSpacecraft (event, spacecraftId, planetId)
   {
-    // todo set the selected spacecraft
-    // todo send spacecraft to planet using the API
-    // todo call getPlanetsWithSpacecrafts to refresh the page content
+    if (!isLoading && Number.isInteger(selectedPlanetId) && selectedPlanetId !== planetId)
+    {
+      setSelectedSpacecraftId(spacecraftId);
+      enableLoading();
+      const {isError} = await SpaceTravelApi.sendSpacecraftToPlanet({spacecraftId, targetPlanetId: selectedPlanetId});
+      if (!isError)
+      {
+        await getPlanetsWithSpacecrafts();
+        setSelectedPlanetId(null);
+        setSelectedSpacecraftId(null);
+      }
+      disableLoading();
+    }
   }
 
   return (
