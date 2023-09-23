@@ -13,23 +13,26 @@ function App ()
   return (
     <>
       {
-        // todo wrap with BrowserRouter and render the necessary components
+        <BrowserRouter>
         <div className={styles["app"]}>
           <header className={styles["app__header"]}>
-            todo
+            <NavigationBar/>
           </header>
 
           <main className={styles["app__main"]}>
-            todo
+          <AppRoute/>
           </main>
 
           <footer className={styles["app__footer"]}>
-            todo
+            <Motto/>
           </footer>
         </div>
+        </BrowserRouter>
       }
       {
-        // todo render Loading based on its condition
+        isLoading
+        &&
+        <Loading/>
       }
     </>
   );
