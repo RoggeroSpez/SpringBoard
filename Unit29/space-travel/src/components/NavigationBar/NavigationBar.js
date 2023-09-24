@@ -8,7 +8,7 @@ function NavigationBar ()
     {to: "/planets", text: "🥔Planets🥔"}
   ];
   return (
-    <nav className={style["navigation"]}>
+    <nav className="navigation">
         {
       routes.map((route, index) => <NavLink key={index} className={({isActive, isPending}) =>
       `${styles["navigation__item"]} 
