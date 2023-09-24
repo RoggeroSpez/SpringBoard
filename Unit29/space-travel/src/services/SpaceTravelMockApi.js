@@ -55,12 +55,6 @@ class SpaceTravelMockApi
         name: "Neptune",
         currentPopulation: 0,
         pictureUrl: "https://upload.wikimedia.org/wikipedia/commons/0/06/Neptune.jpg"
-      },
-      {
-        id: 8,
-        name: "Omicron Persei 8",
-        currentPopulation: 0,
-        pictureUrl: "https://static.wikia.nocookie.net/enfuturama/images/a/a1/Love_%26_Rocket_%28Main_Episode%29_-_255.png/revision/latest?cb=20210929183024"
       }
     ],
     spacecrafts: [
