@@ -18,11 +18,9 @@ function App ()
           <header className={styles["app__header"]}>
             <NavigationBar/>
           </header>
-
           <main className={styles["app__main"]}>
           <AppRoute/>
           </main>
-
           <footer className={styles["app__footer"]}>
             <Motto/>
           </footer>
@@ -30,9 +28,7 @@ function App ()
         </BrowserRouter>
       }
       {
-        isLoading
-        &&
-        <Loading/>
+        isLoading && <Loading/>
       }
     </>
   );

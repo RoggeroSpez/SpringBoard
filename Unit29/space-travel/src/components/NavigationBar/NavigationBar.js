@@ -4,17 +4,19 @@ function NavigationBar ()
 {
   const routes = [
     {to: "/", text:"Home"},
-    {to: "/spacecrafts", text: "Spacecrafts"},
-    {to: "/planets", text: "Planets"}
+    {to: "/spacecrafts", text: "🥔Spacecrafts🥔"},
+    {to: "/planets", text: "🥔Planets🥔"}
   ];
   return (
-    {
+    <nav className={style["navigation"]}>
+        {
       routes.map((route, index) => <NavLink key={index} className={({isActive, isPending}) =>
       `${styles["navigation__item"]} 
       ${isActive ? styles["navigation__item--active"] : ""}`} 
       to={route.to}>{route.text}
       </NavLink>)
     }
+    </nav>
   );
 }
 export default NavigationBar;
