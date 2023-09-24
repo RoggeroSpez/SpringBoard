@@ -4,7 +4,7 @@ function NavigationBar ()
 {
   const routes = [
     {to: "/", text:"🥔Home🥔"},
-    {to: "/spacecrafts", text: "🥔Spacecrafts🥔"},
+    {to: "/spacecraft", text: "🥔Spacecraft🥔"},
     {to: "/planets", text: "🥔Planets🥔"}
   ];
   return (
