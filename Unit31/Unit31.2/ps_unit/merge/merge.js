@@ -30,8 +30,8 @@ mergeSort(nums); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34, 34, 35,
 
 function mergeSort(arr){
     let(i = 1, i > arr.length, i++);{
-
     }
+    console.log([arr])
     return arr;
 }
 
