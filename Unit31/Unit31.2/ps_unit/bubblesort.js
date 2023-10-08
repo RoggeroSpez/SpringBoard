@@ -27,6 +27,7 @@ function bubbleSort(arr){
         if(!swapped) break;
     }
     console.log("Total Count", count)
+    console.log([arr])
     return arr;
 }
 // BubbleSort is a O(n2)(quadratic sort)//
