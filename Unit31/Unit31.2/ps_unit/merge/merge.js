@@ -14,7 +14,7 @@ let arr5 = [3,4,5]
 let arr6 = [1,2]
 
 merge(arr5,arr6) // [1,2,3,4,5]
-
+// break between two portions of the question
 mergeSort([4, 20, 12, 10, 7, 9]); // [4, 7, 9, 10, 12, 20]
 mergeSort([0, -10, 7, 4]); // [-10, 0, 4, 7]
 mergeSort([1, 2, 3]); // [1, 2, 3]
