@@ -29,6 +29,12 @@ mergeSort(nums); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34, 34, 35,
                  //  43, 67, 75, 232, 232, 453, 546, 4342]
 // My code begins
 
+function fullmerge(a, b, c){
+    const results =[];
+    let merge1 = a;
+    let merge2 = b;
+    let merge3 = c;
+
 function merge1(arr1, arr2){
     const r = [];
     let i = 0;
@@ -106,6 +112,9 @@ function merge3(arr5, arr6){
     console.log([res])
     return res;
 }
+
+return results;  
+ }
 
 
 // O(n log n) merging arrays use O(n+m) time/space
