@@ -28,11 +28,29 @@ let nums = [
 mergeSort(nums); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34, 34, 35,
                  //  43, 67, 75, 232, 232, 453, 546, 4342]
 
-function mergeSort(arr){
-    let(i = 1, i > arr.length, i++);{
+function merge(arr1, arr2){
+    const r = [];
+    let i = 0;
+    let j = 0;
+    while(i < arr1.length && j < arr2.length){
+        if(arr1[i] < arr2[j]){
+            r.push(arr1(i));
+            i++;
+        }
+        else {
+            r.push(arr2[j]);
+            j++;
+        }
     }
-    console.log([arr])
-    return arr;
+    while(i < arr1.length){
+        r.push(arr1[i]);
+        i++
+    }
+    while(j < arr2.length){
+        r.push(arr2[j]);
+        j++
+    }
+    return r;
 }
 
-// O(n log n)
+// O(n log n) merging arrays use O(n+m) time/space
