@@ -14,8 +14,9 @@ insertionSort(nums); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34,
 function insertionSort(arr) {
     for(let i = 0; i < arr.length; i++){
         let currentValue = arr[i];
-        for (var j = i - 1; j > -1 && arr[j] > currentValue; j--){}
+        for (let j = i - 1; j > -1 && arr[j] > currentValue; j--){}
         arr[j + 1 ] = currentValue;
     }
+    console.log([arr])
     return arr;
 }
