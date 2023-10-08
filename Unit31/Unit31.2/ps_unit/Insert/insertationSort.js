@@ -20,3 +20,5 @@ function insertionSort(arr) {
     console.log([arr])
     return arr;
 }
+
+// O(n2) n to the second power
