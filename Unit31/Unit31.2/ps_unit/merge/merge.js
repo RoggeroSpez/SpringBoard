@@ -51,8 +51,10 @@ function merge1(arr1, arr2){
         r.push(arr2[j]);
         j++
     }
+    console.log([r])
     return r;
 }
+
 function merge2(arr3, arr4){
     const re = [];
     let k = 0;
@@ -75,6 +77,7 @@ function merge2(arr3, arr4){
         re.push(arr4[l]);
         l++
     }
+    console.log([re])
     return re;
 }
 
@@ -100,6 +103,9 @@ function merge3(arr5, arr6){
         res.push(arr6[n]);
         n++
     }
+    console.log([res])
     return res;
 }
+
+
 // O(n log n) merging arrays use O(n+m) time/space
