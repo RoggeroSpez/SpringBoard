@@ -27,6 +27,7 @@ let nums = [
 
 mergeSort(nums); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34, 34, 35,
                  //  43, 67, 75, 232, 232, 453, 546, 4342]
+// My code begins
 
 function merge(arr1, arr2){
     const r = [];
