@@ -10,14 +10,24 @@
     <hr>
     <ol>
 <li>Questions: What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block? Ref:Q4</li>
+<br>
+<br>
 <li>Anwsers: It creates a closure which will help protect from Name errors where one line of code might clash with another when using similar Names or Keys</li>
+<br>
+<hr>
+<br>
 <li>Questions: In what order will the numbers 1-4 be logged to the console when the code below is executed? Why? (function() {
     console.log(1); 
     setTimeout(function(){console.log(2)}, 1000); 
     setTimeout(function(){console.log(3)}, 0); 
     console.log(4);
 })(); Ref:Q8</li>
+<br>
+<br>
 <li>Anwsers: this is a protion to the Big "O" notation algorthm where its a matter of call time, with that being said the times would be log 1 followed by 4 as they are both IIFE they do not have any lag time then following them is three which has a small window of "0" due to it having a numeric value it creates a small gap between log 1 log 4 and log 3 and the last log is 2 with the final time being a numercal value of 1000 which creates the delayed time call.</li>
+<br>
+<hr>
+<br>
 <li>Questions: What will be the output when the following code is executed? Explain. console.log(false == '0')
     console.log(false === '0') Ref:Q18</li>
 <li>Anwsers: the first one is written with a truthy code which means it can return one way or the other determining on how it is applied, while the second code is written as an absolute which means it will remain false and can not be altered unless re-written otherwise.</li>
