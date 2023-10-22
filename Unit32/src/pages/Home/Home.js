@@ -4,27 +4,15 @@ function Home ()
   return (
     <>
       <section className={styles["section__container"]}>
-        <h1>Welcome to Westeros</h1>
+        <h1>Welcome to the world created by George R.R. Martin</h1>
       </section>
       <section className={styles["section__container"]}>
         <h2>Learn about your Favorite Game of Thrones Character</h2>
-        <p>In this program you will be able to learn about the characters from the Game of thrones universe related to the </p>
+        <p>In this program you will be able to learn about the characters from the Game of thrones universe related to the box set of "A Song of Ice and Fire</p>
       </section>
       <section className={styles["section__container"]}>
-        <h2>🌍 Never Neglect to be Creative and  Innovative</h2>
-        <p>We are humans and we love to create and explore it is part of our instincts to adapt and create.</p>
-      </section>
-      <section className={styles["section__container"]}>
-        <h2>🚀 Enter Space Travel: Where Dreams Take Flight</h2>
-        <p>When you Embark on this extraordinary journey with our technology, we have named "Space Potatoes United Develpoment" or "S.p.u.d.", We hope that your journey is safe and a great success in the endvours of exploration in the wide cosmos.  </p>
-      </section>
-      <section className={styles["section__container"]}>
-        <h2>🔧 Engineer, Explorer, Leader</h2>
-        <p>Build and Create while leading the way to a better tomorrow! In the vastness of the Space adaptability is a key we of Surviving and Success in your endvours.</p>
-      </section>
-      <section className={styles["section__container"]}>
-        <h2>🌠 A Universe of Possibilities Awaits🍟</h2>
-        <p>All ways look from multiple views so that you can see all the Possibilities that might be just out of sight.🥔</p>
+        <h2>Learn about the Houses</h2>
+        <p>Within Westeros and Essos there are many factions from Nobility to Royalty</p>
       </section>
     </>
   );
@@ -32,7 +20,7 @@ function Home ()
 export default Home;
 
 
-//Home -Display General Information about the application you will generate information with out the API
+//Home -Display General Information about the application you will generate information without the API
 //Characters -Lists all the charcters with pagination - you will display the name or aliases if it has no name - you will display the culture - you will display an icon based on gender
 //Character - Displays the information about the related character - you will display every field mention in the characters plus born diedf titles - you will display father monther spulse and allegiances by ther name data from api using related methods
 //Houses -Listss all houses with pagination -you will display the name and titles (if any) - you will also display current lord( if any) and sworn members(if any) with and icon and navigate to the character on click action
@@ -53,3 +41,5 @@ export default Home;
 // Pages
 //- Page  based on 1 as current value by default
 //- Page sizes are default value of 10 on return
+
+// For the arrow icons use &#11185; for the Right and &#11184; for the left for the pagination
