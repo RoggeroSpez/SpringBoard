@@ -1,4 +1,5 @@
-import from"";
+import chacter from"https://www.anapioficeandfire.com/api";
+import Characters from "https";
 class API{
     static async getCharacter ()
     {
