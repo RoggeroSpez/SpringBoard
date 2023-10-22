@@ -23,7 +23,7 @@ export default Home;
 //Home -Display General Information about the application you will generate information without the API
 //Characters -Lists all the charcters with pagination - you will display the name or aliases if it has no name - you will display the culture - you will display an icon based on gender
 //Character - Displays the information about the related character - you will display every field mention in the characters plus born diedf titles - you will display father monther spulse and allegiances by ther name data from api using related methods
-//Houses -Listss all houses with pagination -you will display the name and titles (if any) - you will also display current lord( if any) and sworn members(if any) with and icon and navigate to the character on click action
+//Houses -Lists all houses with pagination -you will display the name and titles (if any) - you will also display current lord( if any) and sworn members(if any) with and icon and navigate to the character on click action
 
 //Chacters and Houses
 //-The Characters and House pagination you will store the current page and page size in the state (each should have a default vaule)
