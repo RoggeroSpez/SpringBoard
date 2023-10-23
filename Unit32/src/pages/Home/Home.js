@@ -2,7 +2,7 @@ import styles from "./Home.module.css";
 function Home ()
 {
   return (
-    <>
+    <><section className={styles["Body"]}>
       <section className={styles["section__container"]}>
         <h1>Welcome to the world created by George R.R. Martin</h1>
       </section>
@@ -13,6 +13,7 @@ function Home ()
       <section className={styles["section__container"]}>
         <h2>Learn about the Houses</h2>
         <p>Within Westeros and Essos there are many factions from Nobility to Royalty</p>
+      </section>
       </section>
     </>
   );

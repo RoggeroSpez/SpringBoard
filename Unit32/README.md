@@ -1,0 +1,1 @@
+Welcome to the Springboard Capstone Project, this project is part to the Guided Capstone Project. The project is set for Game of Thrones Song of Fire and Ice the books series by George R.R. Martin. This project is designed to show Characters data and information as well as the Houses which they come from.
