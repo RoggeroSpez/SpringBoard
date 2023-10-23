@@ -4,7 +4,7 @@ function App ()
 {
   return (
     <>
-      Guided Capstone Project
+      Game Of Thrones
     </>
   );
 }
