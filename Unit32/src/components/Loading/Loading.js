@@ -12,7 +12,7 @@ function Loading ()
                          {
                            if (dots.length < 5)
                            {
-                             setDots(prevDots => [...prevDots, "🥔"]);
+                             setDots(prevDots => [...prevDots, "."]);
                            }
                          },
                          200
@@ -23,7 +23,7 @@ function Loading ()
 
   return (
     <div className={styles["loading"]}>
-      <span>🥔Relocating Stars🥔</span>
+      <span>Loading...</span>
       {dots.map((dot, index) => <span key={index}>{dot}</span>)}
     </div>
   );
