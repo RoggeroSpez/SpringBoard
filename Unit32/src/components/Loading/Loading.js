@@ -12,7 +12,7 @@ function Loading ()
                          {
                            if (dots.length < 5)
                            {
-                             setDots(prevDots => [...prevDots, "."]);
+                             setDots(prevDots => [...prevDots, "C:\Users\Phros\Documents\GitHub\SpringBoard\Unit32\src\A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg"]);
                            }
                          },
                          200
