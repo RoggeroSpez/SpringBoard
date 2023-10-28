@@ -4,7 +4,7 @@ function App ()
 {
   return (
     <>
-      Game Of Thrones
+      Game Of Thrones Wiki
     </>
   );
 }
