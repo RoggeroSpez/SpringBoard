@@ -26,6 +26,7 @@ const Houses = () => {
 
   return (
     <ul>
+      <navigationBar/>
       {houses.map(house => (
         <li key={house.url}>
           {house.name}
