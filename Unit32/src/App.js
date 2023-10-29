@@ -4,11 +4,10 @@ import React, { useState, useEffect } from "react";
 import Pagination from "./components/Pagination/Pagination";
 import NavigationBar from "./components/NavigationBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import characters from "./pages/characters/characters";
+import characters from "./pages/characters";
 
 function app() {
-  return (
-  );
+  return ();
 };
 
 export default app;

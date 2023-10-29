@@ -4,7 +4,7 @@ import characters from "http://anapioficeandfire.com/api/characters/"
 
 function Characters ()
 {
-    const [characters/:id ]
+    
 }
 
 export default characters;
