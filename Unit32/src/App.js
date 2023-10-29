@@ -1,7 +1,4 @@
 import {BrowserRouter} from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
-
 function App() {
   return (<>
       <BrowserRouter>
@@ -12,7 +9,6 @@ function App() {
         alt="GameOfThrones A Song of Ice and Fire by George R.R. Martin" />
       </main>
       <footer>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7vNNghvz2BXXcIScnjUdqf?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </footer>
       </div>
     </BrowserRouter>
