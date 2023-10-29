@@ -3,7 +3,7 @@ import styles from "./app.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 
-function app() {
+function App() {
   return (<>
     {
       <BrowserRouter>
@@ -25,4 +25,4 @@ function app() {
   );
 }
 
-export default app;
+export default App;
