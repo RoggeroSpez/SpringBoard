@@ -1,11 +1,11 @@
 import {NavLink} from "react-router-dom";
 import styles from "./NavigationBar.module.css";
-function NavigationBar ()
+function navigationBar ()
 {
   const routes = [
     {to: "/", text:"Home"},
-    {to: "/Characters", text: "Characters"},
-    {to: "/Houses", text: "Houses"}
+    {to: "/characters", text: "Characters"},
+    {to: "/houses", text: "Houses"}
   ];
   return (
     <nav className="navigation">
@@ -19,4 +19,4 @@ function NavigationBar ()
     </nav>
   );
 }
-export default NavigationBar;
+export default navigationBar;
