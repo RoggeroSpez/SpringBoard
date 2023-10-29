@@ -2,14 +2,20 @@
 //import { useParams } from "react-router-dom";
 import houses from "https://www.anapioficeandfire.com/api/houses";
 
-<section className="houses">
-    <ol>
-    <li>"Name": "";</li>
-    <li>"Sigil": "img";</li>
-    <li>"CurrentLord":"";</li>
-    <li>"SwornMembers":"";</li>
-    <li>"Allegiances": "";</li>
-    </ol>
-</section>
-
+        int Id { get; set; }
+        string Name { get; set; }
+        string CoatOfArms { get; set; }
+        string[] Titles { get; set; }
+        int? CurrentLord { get; set; }
+        
+        houses()
+        {
+            return new house()
+            {
+                Id = Id,
+                Name = Name,
+                CoatOfArms = CoatOfArms,
+                CurrentLordId = CurrentLord,
+            };
+        }
 export default houses;

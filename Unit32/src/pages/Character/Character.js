@@ -1,22 +1,17 @@
 import {useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom";
-import characters from "http://anapioficeandfire.com/api/characters/"
+import characters from "./pages/characters"
 
-let charcter = ['About', 'Relations'];
-let About = ['Born', 'Died', 'Titles'];
-let Relations = ['Father', 'Mother', 'Spouse', 'Allegiances'];
+${}
+string URL { get; }
+string Name { get; set; }
+Gender Gender { get; set; }
+string Culture { get; set; }
+string Born { get; set; }
+string Died { get; set; }
+string[] Titles { get; set; }
+string[] Aliases { get; set; }
 
-<div> <About Born = "Born" Died = "Died" Titles = "Titles"/> </div>
-"Born":"";
-"Died":"";
-"Titles":"";
-
-<div> <Relations Father = "Father" Mother = "Mother" Spouse = "Spouse" Allegiances = "Alligencies"/> </div>
-"Father":"";
-"Mother":"";
-"Spouse":"";
-"Allegiances":"";
-
-export default characters;
+export default character;
 
 //Details about the character relations
