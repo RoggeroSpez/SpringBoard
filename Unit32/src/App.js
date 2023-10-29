@@ -1,6 +1,6 @@
 import {BrowserRouter} from "react-router-dom";
-import NavigationBar from "./components/NavigationBar/NavigationBar";
-import AppRoute from "./routes/AppRoute";
+import NavigationBar from "./Components/navigationBar";
+import AppRoute from "./Routes/AppRoute";
 
 function App ()
 {
