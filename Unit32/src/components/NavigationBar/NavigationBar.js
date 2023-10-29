@@ -1,9 +1,4 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import home from "./pages/home";
-import characters from "../../pages/Characters/Characters";
-import houses from "../../pages/houses";
-import navBar from ".navBar";
-
 function navigationBar (){
   return (
     <div className="App">
