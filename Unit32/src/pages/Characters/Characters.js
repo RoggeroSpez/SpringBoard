@@ -18,3 +18,5 @@ return(
 };
 
 export default characters;
+
+//Data about Characters

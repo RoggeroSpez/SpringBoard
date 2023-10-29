@@ -18,3 +18,5 @@ let Relations = ['Father', 'Mother', 'Spouse', 'Allegiances'];
 "Allegiances":"";
 
 export default characters;
+
+//Details about the character relations
