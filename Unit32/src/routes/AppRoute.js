@@ -12,7 +12,7 @@ function AppRoute ()
     <Route path="/" element={<Home/>}/>
     <Route path="/House" element={<House/>}/>
     <Route path="/Characters" element={<Characters/>}/>
-    <Route path="/Character" element={<Character />}/>
+    <Route path="/Character/:id" element={<Character />}/>
     <Route path="*" element={<Navigate to={"/"} />}/>
     </Routes>
   );
