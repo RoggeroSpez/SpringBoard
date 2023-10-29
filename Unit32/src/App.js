@@ -1,7 +1,6 @@
-import {BrowserRouter} from "react-router-dom";
+import navigationBar from "./Components/navigationBar";
 function App() {
   return (<>
-      <BrowserRouter>
       <div>
       <header><navigationBar/></header>
       <main>
@@ -11,7 +10,6 @@ function App() {
       <footer>
       </footer>
       </div>
-    </BrowserRouter>
     </>
   );
 }
