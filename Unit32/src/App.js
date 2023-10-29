@@ -1,5 +1,5 @@
 import {BrowserRouter} from "react-router-dom";
-import NavigationBar from "./Components/navigationBar";
+import NavigationBar from "./Components/NavigationBar";
 import AppRoute from "./Routes/AppRoute";
 
 function App ()
