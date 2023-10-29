@@ -2,7 +2,9 @@ import styles from "./Home.module.css";
 function Home ()
 {
   return (
-    <><section className={styles["Body"]}>
+    <>
+    <navigationBar/>
+    <section className={styles["Body"]}>
       <section className={styles["section__container"]}>
         <h1>Welcome to the world created by George R.R. Martin</h1>
       </section>

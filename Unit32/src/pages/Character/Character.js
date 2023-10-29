@@ -2,16 +2,25 @@ import {useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom";
 import characters from "./pages/characters"
 
-${}
-string URL { get; }
-string Name { get; set; }
-Gender Gender { get; set; }
-string Culture { get; set; }
-string Born { get; set; }
-string Died { get; set; }
-string[] Titles { get; set; }
-string[] Aliases { get; set; }
-
+function character(){
+    const [character, setCharacter] = useState([]);
+(character => [...character, {...Response.data, id}])
+}
+return
+(
+{character.map()
+<Character 
+URL {character.URL}
+Name = {.id }
+Gender = { .gender}
+Culture = { .culture}
+Born = { .born}
+Died = { .died}
+Titles = { .titles();}
+Aliases = { .aliases();}
+/>
+};
+)
 export default character;
 
 //Details about the character relations
