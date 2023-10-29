@@ -1,17 +1,27 @@
-//import navigationBar from "./Components/navigationBar";
-function App() {
-  return (<>
-      <div>
-      <header></header>
-      <main>
-        <img src="https://upload.wikimedia.org/wikipedia/en/d/dc/A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg"
-        alt="GameOfThrones A Song of Ice and Fire by George R.R. Martin" />
-      </main>
-      <footer>
-      </footer>
-      </div>
+import {BrowserRouter} from "react-router-dom";
+import NavigationBar from "./components/NavigationBar/NavigationBar";
+import AppRoute from "./routes/AppRoute";
+
+function App ()
+{
+  return (
+    <>
+      {
+        <BrowserRouter>
+        <div>
+          <header>
+            <NavigationBar/>
+          </header>
+          <main>
+          <AppRoute/>
+          <img src="https://upload.wikimedia.org/wikipedia/en/d/dc/A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg" alt="GameOfThrones A Song of Ice and Fire by George R.R. Martin" />
+          </main>
+          <footer>
+          </footer>
+        </div>
+        </BrowserRouter>
+      }
     </>
   );
 }
-
 export default App;
