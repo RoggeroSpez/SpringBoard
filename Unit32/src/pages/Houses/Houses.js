@@ -3,15 +3,26 @@ import axios from 'axios';
 
 const Houses = () => {
   const [houses, setHouses] = useState([]);
+  const [nextPageUrl, setNextPageUrl] = useState(null);
 
   useEffect(() => {
     const fetchHouses = async () => {
-      const response = await axios.get('https://anapioficeandfire.com/api/houses');
+      const response = await axios.get('https://anapioficeandfire.com/api/houses?page=1&pageSize=10');
       setHouses(response.data);
     };
 
     fetchHouses();
   }, []);
+    const handleNextClick = () => {
+    axios.get(nextPageUrl)
+      .then(response => {
+        setHouses(Houses.concat(response.data));
+        setNextPageUrl(response.headers.link.split(',').find(link => link.includes('rel="next"')).split(';')[0].replace('<', '').replace('>', ''));
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
   return (
     <ul>
@@ -20,6 +31,7 @@ const Houses = () => {
           {house.name}
         </li>
       ))}
+      <button onClick={handleNextClick}>Next</button>
     </ul>
   );
 };
