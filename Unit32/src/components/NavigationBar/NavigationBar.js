@@ -1,4 +1,6 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import AppRoute from "../../Routes/AppRoute";
+
 function navigationBar (){
   return (
     <div className="App">
