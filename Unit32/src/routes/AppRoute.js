@@ -1,8 +1,8 @@
 import {Routes, Route, Navigate} from "react-router-dom";
-import Home from "./Home";
-import House from "./House";
-import Characters from "./Characters";
-import Character from "./Character";
+import Home from "../Pages/Home";
+import House from "../Pages/House";
+import Characters from "../Pages/Characters";
+import Character from "../Pages/Character";
 
 function AppRoute ()
 {
