@@ -25,11 +25,7 @@ const Character = () => {
         console.log(error);
       });
   };
-
-  if (!character) {
-    return <div>Loading...</div>;
-  }
-
+  
   return (
     <div>
       <NavBar/>
@@ -42,6 +38,5 @@ const Character = () => {
       <button onClick={handleNextClick}>Next</button>
     </div>
   );
-};
-
+  }
 export default Character;
