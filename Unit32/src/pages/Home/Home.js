@@ -1,8 +1,10 @@
+import NavBar from "../../Components/navigationBar/navBar";
+
 function Home ()
 {
   return (
     <>
-    <navigationBar/>
+    <NavBar/>
     <section>
       <section>
         <h1>Welcome to the world created by George R.R. Martin</h1>

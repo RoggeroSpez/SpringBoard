@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavBar from '../../Components/navigationBar/navBar';
 
 const Houses = () => {
   const [houses, setHouses] = useState([]);
@@ -26,7 +27,7 @@ const Houses = () => {
 
   return (
     <ul>
-      <navigationBar/>
+      <NavBar/>
       {houses.map(house => (
         <li key={house.url}>
           {house.name}

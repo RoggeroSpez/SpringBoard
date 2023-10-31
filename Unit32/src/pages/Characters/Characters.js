@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavBar from '../../Components/navigationBar/navBar';
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
@@ -28,7 +29,7 @@ const Characters = () => {
 
   return (
     <div>
-        <navigationBar/>
+        <NavBar/>
       <h1>Characters</h1>
       <ul>
         {characters.map(character => (

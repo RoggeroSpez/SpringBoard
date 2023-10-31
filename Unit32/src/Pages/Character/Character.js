@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import NavBar from "../../Components/navigationBar/navBar";
 
 const Character = () => {
   const [character, setCharacter] = useState(null);
@@ -31,6 +32,7 @@ const Character = () => {
 
   return (
     <div>
+      <NavBar/>
       <h1>{character.name}</h1>
       <img src={character.portraitUrl} alt={character.name} />
       <p>{character.aliases}</p>
