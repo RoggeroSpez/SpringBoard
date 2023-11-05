@@ -1,5 +1,7 @@
 import {BrowserRouter} from "react-router-dom";
 import NavBar from "./Components/navigationBar/navBar";
+import "./App.css";
+
 
 function App ()
 {
