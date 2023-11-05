@@ -1,5 +1,5 @@
-.main {
-    background-color: black;
+main {
+    background: linear-gradient (red,blue);
     background-image: url("./Media/GoTBoxCover.jpg");
     display: flex;
     align-content: center;

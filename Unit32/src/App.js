@@ -13,7 +13,7 @@ function App ()
           <header>
             <NavBar/>
           </header>
-          <main className="main">
+          <main>
           </main>
           <footer>
           </footer>
