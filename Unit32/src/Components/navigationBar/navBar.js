@@ -6,7 +6,7 @@ function NavBar(){
     return(
         <nav className="NavBar">
             <Link to="/" >  Home  </Link>
-            <Link to="/Characters">  Characters  </Link>
+            <Link to="/Character">  Character  </Link>
             <Link to="/Houses">  Houses  </Link>
         </nav>
     );

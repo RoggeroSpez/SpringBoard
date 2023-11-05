@@ -13,7 +13,10 @@ function App ()
           <header>
             <NavBar/>
           </header>
-          <main id="main">
+          <main>
+            <body>
+              
+            </body>
           </main>
           <footer>
           </footer>
