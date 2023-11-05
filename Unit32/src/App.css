@@ -1,6 +1,6 @@
 .Main
 {
-    background: url("./Media/GoTBoxCover.jpg");
+    background-image: url("./Media/GoTBoxCover.jpg");
     display: flex;
     align-content: center;
 }
