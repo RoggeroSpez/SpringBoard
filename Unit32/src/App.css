@@ -1,6 +1,6 @@
-.main
+.Main
 {
-    background-image: url("A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg");
+    background: url("A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg");
     display: flex;
     align-content: center;
 }
