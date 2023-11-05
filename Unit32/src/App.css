@@ -14,4 +14,5 @@ body {
     background-repeat: no-repeat;
     display: flex;
     align-content: center;
+    justify-content: center;
 }
