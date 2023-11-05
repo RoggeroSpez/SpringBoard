@@ -12,7 +12,6 @@ body {
     background-image: url("./Media/GoTBoxCover.jpg");
     background-size: auto;
     background-repeat: no-repeat;
-    display: flex;
     align-content: center;
     justify-content: center;
 }
