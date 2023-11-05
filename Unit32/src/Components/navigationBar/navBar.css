@@ -1,5 +1,5 @@
 .NavBar {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     font-family: 'Cinzel Decorative', serif;
 }
