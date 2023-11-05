@@ -1,4 +1,6 @@
 .main
 {
     background-image: A_Song_of_Ice_and_Fire_book_collection_box_set_cover;
+    display: flex;
+    align-content: center;
 }
