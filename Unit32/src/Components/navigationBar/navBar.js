@@ -1,15 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "./navBar.css";
 
-function NavBar(){
-    return(
-        <nav className="NavBar">
-            <Link to="/" >  Home  </Link>
-            <Link to="/Character">  Character  </Link>
-            <Link to="/Houses">  Houses  </Link>
-        </nav>
-    );
-}
 
+const NavBar = () => (
+    <nav className="navbar">
+        <NavLink to="/"  className={({ isActive}) => (isActive ? "active" : undefined)}>Home</NavLink>
+        <NavLink to="/character" className={({ isActive}) => (isActive ? "active" : undefined)}>Character</NavLink>
+        <NavLink to="/house" className={({ isActive}) => (isActive ? "active" : undefined)}>House</NavLink>
+    </nav>
+)
 export default NavBar;
