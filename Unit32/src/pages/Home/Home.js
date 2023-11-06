@@ -1,7 +1,6 @@
 import NavBar from "../../Components/navigationBar/navBar";
 
-function Home ()
-{
+const Home = () => {
   return (
     <>
     <NavBar/>
