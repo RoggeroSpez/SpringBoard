@@ -9,11 +9,6 @@
 
 body {
     background-color: linear-gradient (red,blue);
-    background-image: url("./Media/GoTBoxCover.jpg");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y:top ;
-    align-content: center;
-    justify-content: center;
+    background-image: url("./Media/MapofWesteros.jpg");
+    background-size: cover;
 }

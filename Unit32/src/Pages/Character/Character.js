@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function Character() {
-  const { id } = useParams();
-  console.log('Character ID:', id);
+  const { id } = useParams(); console.log('Character ID:', id);
   const [character, setCharacter] = useState(null);
   const [nextPageUrl, setNextPageUrl] = useState(null);
 
