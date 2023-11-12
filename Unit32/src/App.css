@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 80%;
+    background-color: slategray;
+}
+
+body {
+    background-color: firebrick;
+    background-image: url('./Media/MapofWesteros.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: darkred;
+}
